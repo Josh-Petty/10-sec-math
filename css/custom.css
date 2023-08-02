@@ -1,0 +1,23 @@
+.title {
+  margin-top: 50px;
+}
+
+.gameContainer {
+  border: 1px solid black;
+}
+
+.scoreboard {
+  border: 1px solid black;
+}
+
+.timerContainer {
+  font-size: 72px;
+}
+
+.equationContainer {
+  font-size: 72px;
+}
+
+#answerBox {
+  width: 50%;
+}

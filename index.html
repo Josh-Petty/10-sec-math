@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="10-Sec-Math">
+    <meta name="author" content="Josh Petty">
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/application.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-8 mx-auto title">
+          <h2>10 Second Math Game</h2>
+        </div>
+      </div>
+      <div class="row>">
+        <div class="col-8 mx-auto gameContainer px-5 py-5">
+          <div class="row">
+            <div class="col-2 scoreboard">
+              <p class="mt-4">High Score: <span id="highscore">0</span></p>
+              <p>Score: <span id="score">0</span></p>
+            </div>
+            <div class="col-10 timerContainer">
+              <p class="text-center"><span id="timer">10</span></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-10 equationContainer">
+              <p class="text-center"><span id="equation">1 + 2</span></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-10 answerContainer mb-3 d-flex justify-content-center">
+              <input id="answerBox" class="form-control text-center" type="text" placeholder="Input Answer Here">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-10 instructionContainer mx-auto">
+              <p class="text-center">Instrucions go here</p>
+              <div class="col-12 d-flex mt-2 justify-content-center">
+                <button id="startButton" class="btn btn-primary btn-lg">Start Game</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
