@@ -21,3 +21,7 @@
 #answerBox {
   width: 50%;
 }
+
+.difficultyContainer {
+  border: 1px solid black;
+}
