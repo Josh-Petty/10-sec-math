@@ -18,15 +18,18 @@ var Timer = function () {
           if (timeRemaining === 0) {
             window.clearInterval(timer);
             gameOver();
+            timer = null;
           }
         }, 500);
       }, 1000);
     }
+    return;
   }
 
   this.addTime = function (sec) {
     timeRemaining += sec;
     $('#timer').html(timeRemaining);
+    return;
   }
 }
 
@@ -127,7 +130,7 @@ var gameOver = function () {
 
 /* main game loop */
 var playGame = function () {
-  var timer = new Timer;
+  var timer = new Timer();
   timer.countdown();
     
   window.addEventListener('keyup', function (event) {
@@ -148,12 +151,12 @@ $(document).ready(function () {
 
   $('#startButton').one('click', function () {
     $('#answerBox').unbind();
-    playGame();
+    playGame(timer);
   });
 
   $('#answerBox').one('input', function () {
     $('#startButton').unbind();
-    playGame();
+    playGame(timer);
   });
   
 });
