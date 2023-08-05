@@ -111,6 +111,7 @@ var checkAnswer = function (result, answer) {
 
 /* Game Over */
 var gameOver = function () {
+  $('#answerBox').unbind();
   if (score > highScore) {
     highScore = score;
     $('#highscore').html(highScore);
@@ -133,7 +134,7 @@ var playGame = function () {
   var timer = new Timer();
   timer.countdown();
     
-  window.addEventListener('keyup', function (event) {
+  $('#answerBox').on('keyup', function (event) {
     var answer = $('#answerBox').val();
     if ((event.key === 'Enter') && (answer)) {
       if (checkAnswer(result, parseInt(answer)) === true) {
@@ -151,12 +152,12 @@ $(document).ready(function () {
 
   $('#startButton').one('click', function () {
     $('#answerBox').unbind();
-    playGame(timer);
+    playGame();
   });
 
   $('#answerBox').one('input', function () {
     $('#startButton').unbind();
-    playGame(timer);
+    playGame();
   });
   
 });
