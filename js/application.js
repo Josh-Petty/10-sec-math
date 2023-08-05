@@ -123,6 +123,7 @@ var gameOver = function () {
 
   if (playAgain) {
     result = getEquation();
+    $('#answerBox').val('');
     playGame();
     score = 0;
     $('#score').html(score);
